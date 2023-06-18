@@ -1,5 +1,5 @@
 const api_key = "<mi_api_key>";
-const url = `https://newsapi.org/v2/everything?q=technology&language=es&source=google-news&sortBy=publishedAt&apiKey=${api_key}`
+const url = `https://newsapi.org/v2/everything?q=tecnología&domains=bbc.com&language=es&sortBy=publishedAt&apiKey=${api_key}`
 
 async function getNews() {
 
@@ -32,7 +32,7 @@ function appendNew(article){
     img.className = "img"
 
     text.innerHTML = article.title
-    source.innerHTML = `${article.source.name} | ${article.author}`
+    source.innerHTML = `${article.source.name} | ${article.publishedAt}`
     img.src = article.urlToImage
     
     // Evento: redirección a la página del titular
