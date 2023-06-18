@@ -1,0 +1,15 @@
+{
+    "name": "News Extension",
+    "description": "Browser extension to display latest news in technology and science",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["scripting"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_icon": {
+        "16": "imgs/icon.png"
+      },
+      "default_title": "Show news",
+      "default_popup": "index.html"
+    }
+}
