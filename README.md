@@ -12,13 +12,13 @@ Además de los ficheros habituales que se añaden en cualquier proyecto web, tam
         "version": "1.0",
         "manifest_version": 3,
         "permissions": ["scripting"],
-        "host_permissions": ["<all_urls>"], // Webs a las que se necesita acceder
+        "host_permissions": ["<all_urls>"],
         "action": {
-        "default_icon": {
-            "16": "icon.png"
-        },
-        "default_title": "Title",
-        "default_popup": "popup.html"
+            "default_icon": {
+                "16": "icon.png"
+            },
+            "default_title": "Title",
+            "default_popup": "popup.html"
         }
     } 
 
@@ -30,7 +30,7 @@ Esta extensión me permite ver las últimas noticias de distintos periódicos so
 
 Para ello, me he ayudado de **News API**. Con esta API REST se pueden hacer fácilmente peticiones en base a distintos criterios, como palabras clave, idioma, fecha de publicación, etc.
 
-    https://newsapi.org/v2/everything?q=tecnología&domains=bbc.com&language=es&sortBy=publishedAt&apiKey=<mi_api_key>
+    https://newsapi.org/v2/everything?q=ciencia&domains=bbc.com,www.abc.es&language=es&sortBy=publishedAt&apiKey=<mi_api_key>
 
 De este modo, se devuelve un objeto JSON que tan solo hay que deserializar para poder trabajar con los campos deseados de cada noticia y volcarlos en el HTML.
 
