@@ -1,5 +1,5 @@
 const api_key = "<mi_api_key>";
-const url = `https://newsapi.org/v2/everything?q=ciencia&sources=cnn,el-mundo&language=es&sortBy=publishedAt&apiKey=${api_key}`
+const url = `https://newsapi.org/v2/everything?q=ciencia&domains=bbc.com,elmundo.es,www.abc.es&language=es&sortBy=publishedAt&apiKey=${api_key}`
 
 async function getNews() {
 
