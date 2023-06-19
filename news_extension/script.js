@@ -1,5 +1,5 @@
 const api_key = "<mi_api_key>";
-const url = `https://newsapi.org/v2/everything?q=tecnología&domains=bbc.com&language=es&sortBy=publishedAt&apiKey=${api_key}`
+const url = `https://newsapi.org/v2/everything?q=ciencia&sources=cnn,el-mundo&language=es&sortBy=publishedAt&apiKey=${api_key}`
 
 async function getNews() {
 
@@ -37,7 +37,7 @@ function appendNew(article){
     
     // Evento: redirección a la página del titular
     text.onclick = function() {
-        window.location.href = article.url;
+        chrome.tabs.create({ url: article.url });
     };
 
     div.appendChild(img)
