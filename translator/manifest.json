@@ -1,0 +1,14 @@
+{
+    "name": "Translator",
+    "description": "Translates any expression selected",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "images/icon-16.png"
+    },
+    "permissions": ["activeTab", "scripting", "contextMenus"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "service_worker.js"
+    }
+}
